@@ -14,7 +14,7 @@ int replacement(bst_t *tree)
 	}
 	else
 	{
-		left = replacement(node->left);
+		left = replacement(tree->left);
 		if (left == 0)
 		{
 			return (tree->n);
@@ -34,8 +34,8 @@ int twochildren(bst_t *node)
 {
 	int new_value = 0;
 
-	new_value = replacement(root->right);
-	root->n = new_value;
+	new_value = replacement(node->right);
+	node->n = new_value;
 	return (new_value);
 }
 /**
