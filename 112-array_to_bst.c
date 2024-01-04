@@ -16,11 +16,11 @@ bst_t *array_to_bst(int *array, size_t size)
 	{
 		return (NULL);
 	}
-	
+
 	for (; k < size; k++)
 	{
 		bst_insert(&tree, array[k]);
 	}
-	
+
 	return (tree);
 }
